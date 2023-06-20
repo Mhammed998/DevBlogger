@@ -32,7 +32,6 @@
                   <th>Category</th>
                   <th>Author</th>
                   <th>Status</th>
-                  <th>Tags</th>
                   <th>Actions</th>
                 </thead>
                 <tbody>
@@ -80,13 +79,13 @@
 
 
 
-                            <td>
+                            {{-- <td>
                               @if($post->tags->count() > 0)
                                @foreach( $post->tags as $tag )
                                  <span class="text-info mr-1">#{{ $tag->tag_name }}</span>
                                @endforeach
                               @endif
-                            </td>
+                            </td> --}}
 
 
                             <td>

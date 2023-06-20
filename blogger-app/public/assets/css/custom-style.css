@@ -1,10 +1,8 @@
-
-
-
-
 #deleteUserForm{
     display: inline-block;
 }
+
+
 .control-btn{
     padding: 5px;
     cursor: pointer;
@@ -19,12 +17,15 @@
     background-color: transparent !important;
 }
 
+
 .card .card-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px !important;
 }
+
+
 
 .card-stats .card-header{
     display: unset;
@@ -38,12 +39,12 @@
 }
 
 .create-btn{
-background-color: #fff;
-color: #222 !important;
-padding: 5px 10px;
-border-radius: 5px;
-cursor: pointer;
-font-weight: 500;
+    background-color: #fff;
+    color: #222 !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 
@@ -163,21 +164,71 @@ font-weight: 500;
 
 
 
-.user-single-post{
-    padding: 10px;
-    border: 1px solid #555;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 160px;
- }
+/**************************** Start User Posts *********************************/
 
- .user-single-post .single-post-image img{
-    width: 190px;
-    margin-right:15px;
- }
+.user-posts .user-single-post{
+    padding: 20px;
+    border: 1px solid #111;
+    background-color: transparent;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    min-height: 265px;
+    display: flex;
+}
+
+.user-posts .post-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-posts .user-single-post .post-details h3{
+    color:#fff;
+    margin-top: 0;
+}
+
+
+.user-posts .user-single-post .post-details   .post-date{
+    color: #888;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+     .user-posts .author-single-post{
+        flex-direction: row;
+        gap: 0;
+
+    }
+}
+
+.user-posts .user-single-post .post-image{
+    margin-right: 15px;
+    position: relative;
+}
+
+.user-posts .user-single-post .post-image img{
+    height: 220px;
+    width: 300px;
+    border:1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.user-posts .user-single-post .post-image .category{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px 10px;
+    background-color: var(--second-color);
+    color:#fff;
+}
+
+
+.user-posts .user-single-post .comments-count{
+    min-width: 35px;
+}
+
+/**************************** End User Posts *********************************/
+
+
 
 
  .special-control-btn{

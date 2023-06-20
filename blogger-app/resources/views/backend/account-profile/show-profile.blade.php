@@ -75,34 +75,49 @@
                        <span class="badge badge-warning">{{ $user->posts->count() }} </span>
                     </h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body user-posts">
 
                         @if(!empty($user->posts))
+                           @foreach ($user->posts as $post )
+                           <div class="user-single-post">
 
-                        @foreach ($user->posts as $post )
-                            <a class="user-single-post" href="{{ route('posts.show' , $post->id) }}">
-                                <div class="single-post-image">
-                                    @if(!empty($post->post_image) )
-                                    <img class="img-thumbnail" src="{{ asset('backend/uploads/posts/' . $post->post_image )  }}">
-                                    @else
-                                    <img class="img-thumbnail" src="{{ asset('backend/uploads/posts/default-post.png'  )  }}">
-                                    @endif
-                                </div>
-                                <div class="single-post-details mt-3 ml-3">
-                                    <h4 class="single-post-title text-primary">
-                                        {{ $post->title }}
-                                    </h4>
-                                    <p>
-                                        {!! Str::limit($post->content,250 , '...') !!}
-                                    </p>
-                                    <p class="text-right text-secondary">
-                                        <span>
-                                            <i class="fa fa-calendar"></i> {{ $post->created_at }}
+                            <div class="post-image">
+                                @if(!empty($post->post_image))
+                                    <img  class="" src="{{asset('backend/uploads/posts/' . $post->post_image)}}" alt="user-image">
+                                @else
+                                    <img  class="" src="{{asset('backend/uploads/posts/default-post.png')}}" alt="post-image">
+                                @endif
+                                <span class="category">{{$post->category->name}}</span>
+                            </div>
+                            <div class="post-details">
+                                    <h3 class="captalized">
+                                        <a class="" href="{{route('site.post-details' ,$post->id)}}">
+                                            {{Str::limit($post->short_title , 50 , '..')}}
+                                        </a>
+                                    </h3>
+                                    <span class="post-date">
+                                        <i class="fa fa-calendar"></i>
+                                        {{$post->created_at}}
+                                    </span>
+                                    <div>{{$post->short_content}}</div>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <p class="m-0">
+                                            <i class="fa fa-tags"></i>
+                                            Tags:
+                                            @if($post->tags->count() > 0)
+                                                @foreach($post->tags as $tag)
+                                                  <span class="second-color me-1">#{{$tag->tag_name}}</span>
+                                                @endforeach
+                                            @endif
+                                        </p>
+                                        <span class="comments-count">
+                                            <i class="fa fa-comment"></i>
+                                            {{$post->comments->count()}}
                                         </span>
-                                    </p>
-                                </div>
-                            </a>
-                        @endforeach
+                                    </div>
+                            </div>
+                        </div>
+                           @endforeach
                         @else
                             <div class="alert m-1 alert-warning">There is no post yet !</div>
                         @endif
