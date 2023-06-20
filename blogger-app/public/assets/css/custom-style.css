@@ -1,0 +1,204 @@
+
+
+
+
+#deleteUserForm{
+    display: inline-block;
+}
+.control-btn{
+    padding: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 3px;
+    display: inline-block;
+    border: 0;
+    text-align: center;
+    line-height: 22px;
+    background-color: transparent !important;
+}
+
+.card .card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px !important;
+}
+
+.card-stats .card-header{
+    display: unset;
+}
+
+
+.table-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-btn{
+background-color: #fff;
+color: #222 !important;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+font-weight: 500;
+}
+
+
+.form-group label{
+    margin: 0px 10px !important;
+  }
+
+ .form-group  .form-control{
+      border: 1px solid #555;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding-left:10px;
+  }
+
+
+
+  input#avatar {
+      border: 1px solid #555;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding-left:10px;
+      height: 36px;
+  }
+
+
+.post-view{
+    padding: 10px;
+  }
+
+  .post-view .post-image{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 10px;
+  }
+
+  .post-view article{
+      padding: 20px;
+
+  }
+
+  .post-view .post-info{
+      background-color: #87309f;
+      padding: 10px;
+      border-radius: 20px;
+      color: #fff;
+      margin: 20px 0px;
+  }
+
+
+  .post-view .post-info span{
+      margin-right: 20px;
+  }
+
+  .post-view .post-tags{
+      padding: 5px 15px;
+     border: 1px solid #87309f;
+     border-radius: 20px;
+  }
+
+
+  .post-view .post-tags .badge{
+      margin: 0px 5px;
+     background-color:#87309f ;
+     padding:5px;
+     border-radius: 5px;
+  }
+
+
+  .select2-container--default .select2-selection--single {
+    background-color: #202940;
+    border: 1px solid #555;
+    border-radius: 5px;
+    height: 36px;
+}
+
+  .select2-container--default .select2-selection--multiple {
+    background-color: #202940 !important;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: text;
+  }
+
+
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #89349f !important;
+    border: 1px solid #8832a0 !important;
+    border-radius: 4px;
+    cursor: default;
+    color: #fff !important;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 5px;
+  }
+
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #8f95a3;
+    line-height: 36px;
+}
+
+  .dark-edition .form-control {
+    color: #a9afbbd1;
+}
+
+.form-group input[type=file]
+{
+    opacity: 1 !important;
+    position: unset !important;
+}
+
+
+.select2-container {
+    margin: 0px 0px 20px;
+}
+
+
+
+.user-single-post{
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 160px;
+ }
+
+ .user-single-post .single-post-image img{
+    width: 190px;
+    margin-right:15px;
+ }
+
+
+ .special-control-btn{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color:#fff;
+    border: none;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+ }
+
+ .btn-danger{
+    background-color: red;
+ }
+
+ .btn-success{
+    background-color: green;
+ }
+
+
+
+
